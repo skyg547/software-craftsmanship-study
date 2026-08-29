@@ -58,13 +58,16 @@ timeline
 2. **원클릭 실행 하네스(Harness)**:
    - 모든 스터디 코드는 Java 17 표준만으로 빌드/실행 가능하도록 무의존성 구조 유지.
    - Windows: `./run.bat` / Linux·Mac: `./run.sh`
-3. **학습 아카이빙 원칙**:
-   - 한 챕터가 끝날 때마다 `README.md` 요약 + 실습 코드 작성 ➔ `git commit & push`로 깃허브 상시 동기화.
+3. **학습 아카이빙 & 진도 관리 원칙**:
+   - 도서별/챕터별 세부 진도는 **[`PROGRESS.md`](./PROGRESS.md)**를 Single Source of Truth로 상시 갱신.
+   - 한 챕터가 끝날 때마다 `PROGRESS.md` 체크(`[x]`) + 실습 코드 작성 ➔ `git commit & push`로 깃허브 상시 동기화.
 
 ---
 
 ## 📝 5. 진행 히스토리 (Progress Log)
 
+👉 **상세 도서별/챕터별 체크리스트는 [`PROGRESS.md`](./PROGRESS.md)에서 실시간 관리됩니다.**
+
 | 일자 | 챕터 / 주제 | 완료 내용 |
 | :--- | :--- | :--- |
-| **2026-08-29** | **01. 클린 코드 (Clean Code)** | • 의미 있는 이름(Naming) & 다형성 Enum 수수료 계산 실습<br/>• 단일 책임 함수 & 보호 구문(Guard Clause) 분리<br/>• `Optional<T>` 3대 패턴 및 Null-Safe 컬렉션 반환 원칙<br/>• `account` 프로젝트 `TaxInvoice` / `TaxInvoiceService` 매핑 완료<br/>• 스터디 깃허브 레포(`skyg547/software-craftsmanship-study`) 초기화 & 하네스 푸시 |
+| **2026-08-29** | **01. 클린 코드 (Clean Code)** | • 02장 의미 있는 이름: Enum 다형성 수수료 계산 실습<br/>• 03장 함수: 단일 책임 함수 & 보호 구문(Guard Clause) 분리<br/>• 07장 오류 처리: `Optional<T>` 3대 패턴 & Null-Safe 빈 컬렉션 반환<br/>• `account` 프로젝트 `TaxInvoice` / `TaxInvoiceService` 매핑 완료<br/>• `PROGRESS.md` 세부 진도 관리 체계 수립 및 깃 동기화 |
