@@ -61,6 +61,20 @@ userRepository.findById(id).ifPresent(u -> System.out.println(u.getName()));
 
 ---
 
+## 📌 5. 🔥 [실전 챌린지] 금융/회계 공통코드(CMM_CD) & 매직 넘버 지옥 탈출
+
+### ❌ 레거시의 악몽
+* DB 공통코드 테이블을 열어보지 않으면 알 수 없는 난독화 코드: `"01"`, `"02"`, `"AP"`, `st == 10`
+* 매직 넘버: `10000000`(고액 결제 기준선), `0.1`(부가세율), `50000`(가산 수수료)
+* 런타임 오타 버그: `"001"`, `"ap "` 같은 잘못된 입력이 들어와도 컴파일 시점에 감지 불가
+
+### ⭕ 클린 코드 해결책
+1. **타입 안전한 Enum 승격**: 문자열 공통코드를 스스로 계산 책임을 지닌 Enum([`TaxCategory.java`](./src/com/ho/cleancode/challenge/TaxCategory.java), [`TransactionType.java`](./src/com/ho/cleancode/challenge/TransactionType.java))으로 전환
+2. **다형성(Polymorphism)을 통한 분기 제거**: if-else 지옥 대신 Enum 추상 메서드 `calculateVat()`로 각 세금 유형별 계산 책임 캡슐화
+3. **상태 불변식 캡슐화**: `status.isSettlementAllowed()` 도메인 질의 메서드 제공
+
+---
+
 ## 🌳 `account` 프로젝트 실무 코드 매핑
 
 | 클린 코드 원칙 | `account` 프로젝트 적용 위치 | 적용 내용 |
@@ -68,6 +82,7 @@ userRepository.findById(id).ifPresent(u -> System.out.println(u.getName()));
 | **의미 있는 이름 & 불변식** | `tax/core/.../domain/TaxInvoice.java` | `validateAmounts()`, `isPurchaseType()`, `cancel()` |
 | **Optional을 통한 Null 방어** | `tax/core/.../service/TaxInvoiceService.java` | `getAPInvoiceById()`가 `Optional<TaxInvoice>` 반환 |
 | **명확한 예외 발생** | `tax/core/.../service/TaxInvoiceService.java` | `orElseThrow(() -> new IllegalArgumentException(...))` |
+| **공통코드 Enum화** | `tax/challenge/.../TaxCategory.java` | 과세구분(`"01"`, `"02"`), 거래유형(`"AP"`, `"AR"`) Enum 승격 |
 
 ---
 
@@ -76,3 +91,5 @@ userRepository.findById(id).ifPresent(u -> System.out.println(u.getName()));
 * [TransferServiceLegacy.java](./src/com/ho/cleancode/naming/TransferServiceLegacy.java) vs [TransferServiceClean.java](./src/com/ho/cleancode/naming/TransferServiceClean.java)
 * [InvoiceProcessorLegacy.java](./src/com/ho/cleancode/functions/InvoiceProcessorLegacy.java) vs [InvoiceProcessorClean.java](./src/com/ho/cleancode/functions/InvoiceProcessorClean.java)
 * [OptionalPractice.java](./src/com/ho/cleancode/optional/OptionalPractice.java)
+* 🔥 **[LegacyVatSettlementService.java](./src/com/ho/cleancode/challenge/LegacyVatSettlementService.java) vs [VatSettlementServiceClean.java](./src/com/ho/cleancode/challenge/VatSettlementServiceClean.java)**
+

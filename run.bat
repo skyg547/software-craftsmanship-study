@@ -2,12 +2,15 @@
 chcp 65001 > nul
 echo [1/2] Compiling Clean Code Java sources...
 if not exist "bin" mkdir bin
-javac -encoding UTF-8 -d bin 01-clean-code/src/com/ho/cleancode/naming/*.java 01-clean-code/src/com/ho/cleancode/functions/*.java 01-clean-code/src/com/ho/cleancode/optional/*.java 01-clean-code/src/com/ho/cleancode/Main.java
+
+dir /s /b 01-clean-code\src\*.java > sources.txt
+javac -encoding UTF-8 -d bin @sources.txt
+del sources.txt
 
 if %ERRORLEVEL% NEQ 0 (
     echo [ERROR] Compilation failed!
     exit /b %ERRORLEVEL%
 )
 
-echo [2/2] Running Main Demo...
-java -cp bin com.ho.cleancode.Main
+echo [2/2] Running Main Demo & Challenge Harness...
+java -ea -cp bin com.ho.cleancode.Main
