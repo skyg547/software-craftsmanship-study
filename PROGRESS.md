@@ -8,7 +8,7 @@
 ## 📈 전체 진행률 요약
 
 ```text
-[Stage 1: 백엔드 모던화 & TDD/리팩터링] ▓▓░░░░░░░░ 20% (3/15)
+[Stage 1: 백엔드 모던화 & TDD/리팩터링] ▓▓▓░░░░░░░ 27% (4/15)
 [Stage 2: 객체지향 설계 & 모던 자바]   ░░░░░░░░░░  0% (0/12)
 [Stage 3: 클린/헥사고날 아키텍처 & DDD] ░░░░░░░░░░  0% (0/10)
 [Stage 4: 모던 프론트엔드 & 풀스택 연동] ░░░░░░░░░░  0% (0/8)
@@ -27,11 +27,11 @@
   - *코드*: [`InvoiceProcessorClean.java`](./01-clean-code/src/com/ho/cleancode/functions/InvoiceProcessorClean.java)
 - [x] **07장. 오류 처리 (Error Handling) & Null 방어** `2026-08-29 완료`
   - *실습*: `Optional<T>` 3대 핵심 패턴 (`orElseThrow`, `orElse`, `ifPresent`), 컬렉션 `null` 반환 금지
-  - *코드*: [`OptionalPractice.java`](./01-clean-code/src/com/ho/cleancode/optional/OptionalPractice.java)
-- [ ] **06장. 객체와 자료 구조 (Objects and Data Structures)**
-  - 디미터 법칙(Law of Demeter), 자료 은닉 vs 절차적 DTO, 기차 충돌(Train Wreck) 방지
+- [x] **06장. 객체와 자료 구조 (Objects and Data Structures)** `2026-08-31 완료`
+  - *실습*: DTO(자료구조) vs Rich Domain Model(객체), Tell Don't Ask, 디미터 법칙(Law of Demeter)
+  - *매핑*: `account` 프로젝트 `TaxInvoiceDto` vs `TaxInvoice` (Setter 제거 및 불변식 캡슐화)
 - [ ] **10장. 클래스 (Classes)**
-  - 단일 책임 클래스, 높은 응집도(Cohesion)와 낮은 결합도, 변경으로부터 격리
+  - 단일 책임 클래스(SRP), 높은 응집도(Cohesion)와 낮은 결합도, 변경으로부터 격리
 - [ ] **17장. 냄새와 휴리스틱 (Smells and Heuristics)**
   - 경계 조건 캡슐화, 잘못된 위치의 코드(Feature Envy) 탐색
 
