@@ -35,6 +35,7 @@ gantt
 
 | 챕터 | 주제 | 주요 내용 | 링크 |
 | :--- | :--- | :--- | :--- |
+| **00** | **핀테크/빅테크 Senior Prep** | JVM 심층원리, JIT, 메모리/GC, MSA 멀티모듈(Jib/SharedKernel), 코딩테스트(Two Sum) | [fintech-senior-study](./fintech-senior-study/README.md) |
 | **01** | **클린 코드 & 기본기** | 의미 있는 이름, 함수 분리, Null 방어, `Optional<T>` | [01-clean-code](./01-clean-code/README.md) |
 | **02** | **코드 악취 & 리팩터링 2판** | 24가지 코드 스멜, 조건문 분해, 메서드 추출, 전략 패턴 | *(예정)* |
 | **03** | **TDD & 단위 테스트의 정석** | Red-Green-Refactor, 화폐 예제, 순수 도메인 테스트 | *(예정)* |

@@ -71,3 +71,5 @@ timeline
 | 일자 | 챕터 / 주제 | 완료 내용 |
 | :--- | :--- | :--- |
 | **2026-08-29** | **01. 클린 코드 (Clean Code)** | • 02장 의미 있는 이름: Enum 다형성 수수료 계산 실습<br/>• 03장 함수: 단일 책임 함수 & 보호 구문(Guard Clause) 분리<br/>• 07장 오류 처리: `Optional<T>` 3대 패턴 & Null-Safe 빈 컬렉션 반환<br/>• `account` 프로젝트 `TaxInvoice` / `TaxInvoiceService` 매핑 완료<br/>• `PROGRESS.md` 세부 진도 관리 체계 수립 및 깃 동기화 |
+| **2026-09-08** | **00. 핀테크 시니어 코스 - Day 1** | • Java 실행 메커니즘: JDK/JVM, ClassLoader 3단계, JIT C1/C2 계층형 컴파일, 탈출 분석, JVM Warm-up<br/>• 코딩테스트: Two Sum ($O(N^2) \rightarrow O(N)$ HashMap 1-Pass, 불변 Record `IndexPair`, 초기 용량 최적화, 3회 타이핑 실습) |
+| **2026-09-09** | **00. 핀테크 시니어 코스 - Day 2** | • JVM 메모리 & GC: Stack Frame vs Heap, 참조 복사 함정 vs 객체 생성, 금융 불변 Record Money, Reachability & STW<br/>• 코딩테스트: HashSet 중복 문자 탐색(`Set.add`), HashMap 빈도수 계산(`Map.merge`) |

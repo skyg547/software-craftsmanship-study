@@ -8,11 +8,35 @@
 ## 📈 전체 진행률 요약
 
 ```text
+[핀테크/빅테크 시니어 29주 코스] ▓░░░░░░░░░  7% (2/29주 - Day 1, Day 2 완료)
 [Stage 1: 백엔드 모던화 & TDD/리팩터링] ▓▓▓░░░░░░░ 27% (4/15)
 [Stage 2: 객체지향 설계 & 모던 자바]   ░░░░░░░░░░  0% (0/12)
 [Stage 3: 클린/헥사고날 아키텍처 & DDD] ░░░░░░░░░░  0% (0/10)
 [Stage 4: 모던 프론트엔드 & 풀스택 연동] ░░░░░░░░░░  0% (0/8)
 ```
+
+---
+
+## 💳 핀테크/빅테크 Senior Backend 29주 마스터 코스 (토스 · 카카오 · 네이버 · 쿠팡)
+
+> **목표**: 2027년 1분기 시니어 백엔드 이직 (Java/JVM, 분산시스템, Kafka, 트랜잭션, 코테 체화)  
+> **상세 가이드**: [`fintech-senior-study/README.md`](./fintech-senior-study/README.md)
+
+- [x] **Day 1. Java 실행 메커니즘: JDK · JVM · Bytecode · JIT** `2026-09-08 완료`
+  - *이론*: ClassLoader 3단계, JIT C1/C2 Tiered Compilation, 탈출 분석(스택 할당/스칼라 치환), JVM Warm-up
+  - *문서*: [`day01-jvm-bytecode-jit.md`](./fintech-senior-study/day01-jvm-bytecode-jit.md)
+  - *알고리즘*: Two Sum ($O(N^2) \rightarrow O(N)$ 1-Pass HashMap, Record `IndexPair`, 초기 용량 최적화, 3회 타이핑)
+  - *코드*: [`TwoSum.java`](./fintech-senior-study/src/com/ho/study/algorithm/day01/TwoSum.java), [`TwoSumPractice.java`](./fintech-senior-study/src/com/ho/study/algorithm/day01/TwoSumPractice.java)
+- [x] **Day 2. JVM 메모리 구조 & GC 출발점: Stack · Heap · Reference** `2026-09-09 완료`
+  - *이론*: Stack Frame, Heap(Eden/Survivor/Old), 참조 복사 vs 객체 생성, 금융 불변 Record, GC Reachability & STW
+  - *문서*: [`day02-jvm-memory-gc.md`](./fintech-senior-study/day02-jvm-memory-gc.md)
+  - *실습/알고리즘*:
+    - 참조 복사 검증: [`ReferenceExample.java`](./fintech-senior-study/src/com/ho/study/jvm/ReferenceExample.java)
+    - 금융 불변 Money: [`ImmutableMoneyExample.java`](./fintech-senior-study/src/com/ho/study/jvm/ImmutableMoneyExample.java)
+    - 중복 문자 탐색 (`HashSet.add`): [`DuplicateFinder.java`](./fintech-senior-study/src/com/ho/study/algorithm/day02/DuplicateFinder.java)
+    - 문자 빈도수 (`Map.merge`): [`CharacterFrequency.java`](./fintech-senior-study/src/com/ho/study/algorithm/day02/CharacterFrequency.java)
+- [ ] **Day 3. 가비지 컬렉션 심화: GC 알고리즘(G1, ZGC) & STW 튜닝 및 금융 레이턴시 방어**
+- [ ] **Day 4. JVM 스레드 모델 & 동시성 기초: Java Memory Model(JMM), volatile, synchronized**
 
 ---
 
