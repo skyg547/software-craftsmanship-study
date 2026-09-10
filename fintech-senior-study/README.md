@@ -94,6 +94,8 @@ account/
 | :---: | :--- | :--- | :--- |
 | **Day 1** | **Java 실행 메커니즘** | JDK/JVM 차이, Bytecode, ClassLoader 3단계, JIT C1/C2 컴파일, Tiered Compilation, OSR, Escape Analysis, JVM Warm-up | • [Day 1 스터디 노트](./day01-jvm-bytecode-jit.md)<br/>• [Two Sum 알고리즘 해설](./algorithms/day01-two-sum.md)<br/>• [`TwoSum.java`](./src/com/ho/study/algorithm/day01/TwoSum.java) |
 | **Day 2** | **JVM 메모리 & GC 출발점** | Stack Frame, Heap(Eden/Old), Metaspace, 참조(Reference) 복사의 함정, 금융 불변 Record, GC Root & Reachability | • [Day 2 스터디 노트](./day02-jvm-memory-gc.md)<br/>• [`ReferenceExample.java`](./src/com/ho/study/jvm/ReferenceExample.java)<br/>• [`DuplicateFinder.java`](./src/com/ho/study/algorithm/day02/DuplicateFinder.java)<br/>• [`CharacterFrequency.java`](./src/com/ho/study/algorithm/day02/CharacterFrequency.java) |
+| **Day 3** | **GC 심화, 세대분리 & Two Pointer** | Young/Old 분리(세대 가설), Eden/Survivor, Stop-The-World, P99 Tail Latency, Throughput vs Latency, Two Pointer 최적화 | • [Day 3 스터디 노트](./day03-gc-generation-stw.md)<br/>• [Two Pointer 알고리즘 해설](./algorithms/day03-two-pointer.md)<br/>• [`SortedTwoSum.java`](./src/com/ho/study/algorithm/day03/SortedTwoSum.java)<br/>• [`PalindromeChecker.java`](./src/com/ho/study/algorithm/day03/PalindromeChecker.java) |
+
 
 ---
 

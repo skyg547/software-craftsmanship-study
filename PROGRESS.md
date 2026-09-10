@@ -8,7 +8,7 @@
 ## 📈 전체 진행률 요약
 
 ```text
-[핀테크/빅테크 시니어 29주 코스] ▓░░░░░░░░░  7% (2/29주 - Day 1, Day 2 완료)
+[핀테크/빅테크 시니어 29주 코스] ▓░░░░░░░░░ 10% (3/29주 - Day 1, 2, 3 완료)
 [Stage 1: 백엔드 모던화 & TDD/리팩터링] ▓▓▓░░░░░░░ 27% (4/15)
 [Stage 2: 객체지향 설계 & 모던 자바]   ░░░░░░░░░░  0% (0/12)
 [Stage 3: 클린/헥사고날 아키텍처 & DDD] ░░░░░░░░░░  0% (0/10)
@@ -35,8 +35,17 @@
     - 금융 불변 Money: [`ImmutableMoneyExample.java`](./fintech-senior-study/src/com/ho/study/jvm/ImmutableMoneyExample.java)
     - 중복 문자 탐색 (`HashSet.add`): [`DuplicateFinder.java`](./fintech-senior-study/src/com/ho/study/algorithm/day02/DuplicateFinder.java)
     - 문자 빈도수 (`Map.merge`): [`CharacterFrequency.java`](./fintech-senior-study/src/com/ho/study/algorithm/day02/CharacterFrequency.java)
-- [ ] **Day 3. 가비지 컬렉션 심화: GC 알고리즘(G1, ZGC) & STW 튜닝 및 금융 레이턴시 방어**
-- [ ] **Day 4. JVM 스레드 모델 & 동시성 기초: Java Memory Model(JMM), volatile, synchronized**
+- [x] **Day 3. GC 심화, 세대분리 & Two Pointer 패턴** `2026-09-10 완료`
+  - *이론*: 약한 세대 가설, Eden/Survivor/Promotion, Stop-The-World(STW), P99 Tail Latency, Throughput vs Latency
+  - *문서*: [`day03-gc-generation-stw.md`](./fintech-senior-study/day03-gc-generation-stw.md), [`day03-two-pointer.md`](./fintech-senior-study/algorithms/day03-two-pointer.md)
+  - *실습/알고리즘*:
+    - GC 압력 시뮬레이션: [`GcPressureExample.java`](./fintech-senior-study/src/com/ho/study/jvm/GcPressureExample.java)
+    - 정적 참조 메모리 누수: [`MemoryLeakExample.java`](./fintech-senior-study/src/com/ho/study/jvm/MemoryLeakExample.java)
+    - 정렬된 Two Sum (Two Pointer, $O(N)$ / $O(1)$): [`SortedTwoSum.java`](./fintech-senior-study/src/com/ho/study/algorithm/day03/SortedTwoSum.java)
+    - Two Pointer 3회 타이핑 템플릿: [`SortedTwoSumPractice.java`](./fintech-senior-study/src/com/ho/study/algorithm/day03/SortedTwoSumPractice.java)
+    - 회문 검사 (Palindrome, $O(N)$ / $O(1)$): [`PalindromeChecker.java`](./fintech-senior-study/src/com/ho/study/algorithm/day03/PalindromeChecker.java)
+- [ ] **Day 4. equals() / hashCode() / HashMap 내부 동작 원리 & 해시 충돌(Collision)**
+- [ ] **Day 5. JVM 스레드 모델 & 동시성 기초: Java Memory Model(JMM), volatile, synchronized**
 
 ---
 

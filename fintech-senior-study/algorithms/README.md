@@ -60,6 +60,7 @@
 | :--- | :---: | :---: | :--- |
 | **"값과 연결된 다른 정보(인덱스, 카운트 등)가 필요하다"** | **`HashMap<K, V>`** | 조회 평균 $O(1)$ | • `userId ➔ UserSession`<br/>• `accountNumber ➔ Account`<br/>• Two Sum: `number ➔ index` |
 | **"오직 존재 여부(중복 방지, 방문 여부)만 필요하다"** | **`HashSet<E>`** | 추가/조회 평균 $O(1)$ | • **결제 멱등성 (Idempotency)**: 이미 처리된 `transactionId`인가?<br/>• Kafka 중복 컨슘 방지: 처리된 `eventId`<br/>• 첫 번째 중복 문자 탐색 |
+| **"정렬된 배열에서 합을 찾거나 대칭 범위를 좁혀야 한다"** | **`Two Pointer`** | $O(N)$ 시간, **$O(1)$ 공간** | • 정렬된 결제 금액 쌍 탐색<br/>• 회문(Palindrome) 검사<br/>• 불필요한 객체 할당 없는 극단적 메모리 최적화 |
 
 ---
 
@@ -72,3 +73,8 @@
 * **Day 2: HashSet & HashMap 실전**
   * 문제 1: 첫 번째 중복 문자 탐색 (`DuplicateFinder.java` — `Set.add()` 반환값 활용)
   * 문제 2: 문자 빈도수 계산 (`CharacterFrequency.java` — `Map.merge()` 활용)
+* **[Day 3: Two Pointer (투 포인터) 실전](./day03-two-pointer.md)**
+  * 문제 1: 정렬된 배열에서 두 수의 합 (`SortedTwoSum.java` — $O(N)$ 시간, $O(1)$ 공간)
+  * 문제 2: 회문(Palindrome) 검사 (`PalindromeChecker.java` — 대칭성 축소 검사)
+  * HashMap vs Two Pointer 선택 기준 및 면접 함정 대비
+
